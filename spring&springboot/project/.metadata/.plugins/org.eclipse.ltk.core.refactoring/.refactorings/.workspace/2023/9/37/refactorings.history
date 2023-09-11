@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;learn-spring-framework&apos; to &apos;learn-spring-framework-01&apos;" description="Rename resource &apos;learn-spring-framework&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/learn-spring-framework" name="learn-spring-framework-01" stamp="1694420252109" updateReferences="true"/>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;learn-spring-framework&apos; to &apos;learn-spring-framework-01&apos;" description="Rename resource &apos;learn-spring-framework&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/learn-spring-framework" name="learn-spring-framework-01" stamp="1694420252109" updateReferences="true"/>&#x0A;<refactoring comment="Delete resource &apos;learn-spring-framework-01&apos;" deleteContents="false" description="Delete resource &apos;learn-spring-framework-01&apos;" element1="/learn-spring-framework-01" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1694425754880"/>
 </session>

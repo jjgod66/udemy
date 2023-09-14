@@ -3,11 +3,9 @@
 		<title>Welcome Page</title>
 	</head>
 	<body>
-		<div>
-			Welcome to in28minutes
-		</div>
-		<div>
-			Your Name : ${name }
+		<div class="container">
+			<h1>Welcome in28minutes</h1>
+			<a href="list-todos">Manage</a> Your Todos
 		</div>
 	</body>
 </html>

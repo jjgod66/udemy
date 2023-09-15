@@ -25,8 +25,10 @@ public class TodoService {
 							LocalDate.now().plusYears(3), false));
 	}
 	
-	public List<Todo> finmdByUsername(String username) {
-		return todos;
+	public List<Todo> findByUsername(String username) {
+		Predicate<? super Todo> predicate 
+		= todo -> todo.getUsername().equals(username);
+		return todos.stream().filter(predicate).toList();
 	}
 	
 	public void addTodo(String username, String description, LocalDate targetDate, boolean done) {
@@ -35,8 +37,6 @@ public class TodoService {
 	}
 	
 	public void deleteById(int id) {
-		//todo.getId() == id
-		// todo -> todo.getId() == id
 		Predicate<? super Todo> predicate 
 			= todo -> todo.getId() == id;
 		todos.removeIf(predicate);

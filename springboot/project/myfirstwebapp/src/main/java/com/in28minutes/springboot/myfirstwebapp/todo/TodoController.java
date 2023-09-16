@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jakarta.validation.Valid;
 
-@Controller
+//@Controller
 @SessionAttributes("name")
 public class TodoController {
 
@@ -23,7 +23,7 @@ public class TodoController {
 		super();
 		this.todoService = todoService;
 	}
-
+	
 	@RequestMapping("list-todos")
 	public String listAllTodos(ModelMap model) {
 		String username = getLoggedInUsername(model);

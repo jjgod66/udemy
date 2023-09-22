@@ -15,28 +15,32 @@ function ListTodosComponent() {
 
     function refreshTodos() {
         retrieveAllTodosForUsernameApi(username)
-            .then(res => {
-                setTodos(res.data);
-            })
-            .catch(err => console.log(err));
+        .then(res => {
+            setTodos(res.data);
+        })
+        .catch(err => console.log(err));
             
     }
 
     function deleteTodo(id) {
         console.log(`clicked ${id}`);
         deleteTodoApi(username, id)
-            .then(() => {
-                //1:display message
-                setMessage(`Delete of todo with id = ${id} successful`);
-                //2:update todos list
-                refreshTodos();
-            })
-            .catch(err => console.log(err));
+        .then(() => {
+            //1:display message
+            setMessage(`Delete of todo with id = ${id} successful`);
+            //2:update todos list
+            refreshTodos();
+        })
+        .catch(err => console.log(err));
     }
 
     function updateTodo(id) {
         console.log(`clicked ${id}`);
         navigate(`/todos/${id}`);
+    }
+
+    function addNewTodo() {
+        navigate('/todos/-1');
     }
 
     return (
@@ -71,6 +75,7 @@ function ListTodosComponent() {
                     </tbody>
                 </table>
             </div>
+            <div className="btn btn-primary m-5" onClick={()=>addNewTodo()}>Add New Todo</div>
         </div>
     )
 }

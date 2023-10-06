@@ -2,6 +2,8 @@ package com.in28minutes.rest.webservices.restfulwebservices.todo;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -29,6 +31,7 @@ public class Todo {
 	private String username;
 	
 	private String description;
+	@JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
 	private LocalDate targetDate;
 	private boolean done;
 

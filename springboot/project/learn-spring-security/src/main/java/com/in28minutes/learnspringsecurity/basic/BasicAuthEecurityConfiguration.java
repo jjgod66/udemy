@@ -70,14 +70,12 @@ public class BasicAuthEecurityConfiguration {
 	public UserDetailsService userDetailService(DataSource dataSource) {
 		
 		var user = User.withUsername("in28minutes")
-//			.password("{noop}dummy")
 			.password("dummy")
 			.passwordEncoder(str -> passwordEncoder().encode(str))
 			.roles(UserRoles.USER.name())
 			.build();
 		
 		var admin = User.withUsername("admin")
-//				.password("{noop}dummy")
 				.password("dummy")
 				.passwordEncoder(str -> passwordEncoder().encode(str))
 				.roles(UserRoles.ADMIN.name(), UserRoles.USER.name())
